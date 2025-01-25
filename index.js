@@ -30,9 +30,10 @@ const search = async () => {
 }
 const postTweet = async () => {
     try {
-        await twitterClient.v2.tweet("Hello world!");
+        const response = await twitterClient.v2.tweet("Hello DevM!");
+        console.log("postTweet Response", response)
     } catch (e) {
-        console.log(e)
+        console.log("postTweet Error", e)
     }
 }
 postTweet();
